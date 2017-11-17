@@ -18,19 +18,19 @@ class MeetTheDoctorsContainer extends Component {
         key="Dr. Dan Fong"
         name="Dr. Dan Fong, DDS"
         description="He is a butt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Blah blah  blah blah blah blah blah Blah blah  blah blah blah blah blah"
-        image={danFong}
-        imageLeft={true} />,
+        image={ danFong }
+        imageLeft={ true } />,
       <Doctor
         key="Dr. Robin Castro"
         name="Dr. Robin Castro, DMD"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-        image={robinCastro}
-        imageLeft={false} />
+        image={ robinCastro }
+        imageLeft={ false } />
     ]
 
     return (
       <Container>
-        <SectionTitle colored={false}/>
+        <SectionTitle colored={ false } text={ "Meet the Doctors" }/>
         { doctors }
       </Container>
     );
