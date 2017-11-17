@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import Doctor from '../components/Doctor.js';
-import DoctorsHeader from '../components/DoctorsHeader.js'
+import SectionTitle from '../components/SectionTitle.js'
 import danFong from '../images/dan-fong.png';
 import robinCastro from '../images/robin-castro.png';
 
@@ -30,7 +30,7 @@ class MeetTheDoctorsContainer extends Component {
 
     return (
       <Container>
-        <DoctorsHeader />
+        <SectionTitle colored={false}/>
         { doctors }
       </Container>
     );
