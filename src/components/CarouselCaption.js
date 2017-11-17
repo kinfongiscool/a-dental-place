@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 const CarouselCaptionContainer = styled.div`
   padding: auto 1rem 1rem 1rem;
-  margin: 0 1.5rem 0 1.5rem;
+  margin: 0 1.5rem -2rem 1.5rem;
   z-index: 10;
   position: relative;
   bottom: 2rem;
