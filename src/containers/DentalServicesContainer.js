@@ -14,8 +14,8 @@ const Container = styled.div`
 
 const DentalServicesFlexContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  max-width: 768px;
+  justify-content: space-around;
+  max-width: 1024px;
   margin: auto auto 2rem auto;
 `;
 
