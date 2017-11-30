@@ -14,10 +14,11 @@ const FooterBoxContainer = styled.div`
 class FooterContainer extends Component {
 
   render() {
+
     return (
-      <FooterBoxContainer>
-        <FooterAddressBox />
-        <FooterHoursBox />
+      <FooterBoxContainer mapHasCursor={ this.props.mapHasCursor }>
+        <FooterAddressBox mapHasCursor={ this.props.mapHasCursor }/>
+        <FooterHoursBox mapHasCursor={ this.props.mapHasCursor }/>
       </FooterBoxContainer>
     );
   }

@@ -11,6 +11,8 @@ const FooterAddressBoxContainer = styled.div`
   z-index: 10;
   position: relative;
   bottom: 4rem;
+  transition: transform 150ms ease-in-out;
+  transform: ${props => props.mapHasCursor ? 'translate(0, 4rem)' : ''};
 `;
 
 const FooterAddressContainer = styled.div`
@@ -29,7 +31,7 @@ class FooterAddressBox extends Component {
 
   render() {
     return (
-      <FooterAddressBoxContainer>
+      <FooterAddressBoxContainer mapHasCursor={ this.props.mapHasCursor }>
         <NameLine>A Dental Place, Ltd.</NameLine>
         <FooterAddressContainer>
           <Address />

@@ -11,6 +11,8 @@ const FooterHoursBoxContainer = styled.div`
   z-index: 10;
   position: relative;
   bottom: 2rem;
+  transition: transform 150ms ease-in-out;
+  transform: ${props => props.mapHasCursor ? 'translate(0, 2rem)' : ''};
 `;
 
 const StyledHoursUl = styled.ul`
@@ -23,7 +25,7 @@ class FooterHoursBox extends Component {
 
   render() {
     return (
-      <FooterHoursBoxContainer>
+      <FooterHoursBoxContainer mapHasCursor={ this.props.mapHasCursor }>
         <span>Hours</span>
         <StyledHoursUl>
           <li>Tuesday</li>
