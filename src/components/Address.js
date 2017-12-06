@@ -4,10 +4,12 @@ import PropTypes from 'prop-types';
 
 const AddressLine = styled.p`
   margin: 0 0 0 0;
-  color: #4A4A4A;
-  text-align: center;
+  color: #FFF;
+  text-align: left;
+  padding: 0;
 
   ${props => props.isHeader && css`
+    color: #4A4A4A;
     text-align: right;
   `}
 `;

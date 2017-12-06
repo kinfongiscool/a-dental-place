@@ -4,6 +4,7 @@ import HeaderContainer from './HeaderContainer.js';
 import CarouselContainer from './CarouselContainer.js';
 import DoctorsContainer from './DoctorsContainer.js';
 import DentalServicesContainer from './DentalServicesContainer.js';
+import MapContainer from './MapContainer.js'
 import './App.css';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
         <CarouselContainer />
         <DoctorsContainer />
         <DentalServicesContainer />
+        <MapContainer />
       </div>
     );
   }
