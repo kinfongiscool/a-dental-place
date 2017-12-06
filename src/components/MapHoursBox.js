@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const FooterHoursBoxContainer = styled.div`
+const MapHoursBoxContainer = styled.div`
   margin: 0 0 0 0;
   background-color: #EBF4FF;
   flex: 1;
@@ -14,13 +14,13 @@ const FooterHoursBoxContainer = styled.div`
   text-align: left;
 `;
 
-const FooterHoursTable = styled.div`
+const MapHoursTable = styled.div`
   display: table;
   table-layout: fixed;
   margin: auto;
 `;
 
-const FooterHoursTableCell = styled.div`
+const MapHoursTableCell = styled.div`
   display: table-cell;
   padding: 0;
   margin: 1rem;
@@ -37,34 +37,34 @@ const StyledHoursUl = styled.ul`
 
 `;
 
-class FooterHoursBox extends Component {
+class MapHoursBox extends Component {
 
   render() {
     return (
-      <FooterHoursBoxContainer mapHasCursor={ this.props.mapHasCursor }>
+      <MapHoursBoxContainer mapHasCursor={ this.props.mapHasCursor }>
         <span>Hours:</span>
-        <FooterHoursTable>
-          <FooterHoursTableCell left>
+        <MapHoursTable>
+          <MapHoursTableCell left>
             <StyledHoursUl left>
               <li>Tuesday</li>
               <li>Wednesday</li>
               <li>Thursday</li>
               <li>Friday</li>
             </StyledHoursUl>
-          </FooterHoursTableCell>
-          <FooterHoursTableCell>
+          </MapHoursTableCell>
+          <MapHoursTableCell>
             <StyledHoursUl>
               <li>7am - 3pm</li>
               <li>10am - 7pm</li>
               <li>10am - 7pm</li>
               <li>7am - 3pm</li>
             </StyledHoursUl>
-          </FooterHoursTableCell>
-        </FooterHoursTable>
-      </FooterHoursBoxContainer>
+          </MapHoursTableCell>
+        </MapHoursTable>
+      </MapHoursBoxContainer>
     );
   }
 
 }
 
-export default FooterHoursBox;
+export default MapHoursBox;

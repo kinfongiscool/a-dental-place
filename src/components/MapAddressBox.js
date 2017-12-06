@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Address from './Address.js';
 import PhoneFax from './PhoneFax.js';
 
-const FooterAddressBoxContainer = styled.div`
+const MapAddressBoxContainer = styled.div`
   background-color: #58A6FF;
   margin: 0 1rem 0 0;
   padding: 2rem;
@@ -15,7 +15,7 @@ const FooterAddressBoxContainer = styled.div`
   transform: ${props => props.mapHasCursor ? 'translate(0, 4rem)' : ''};
 `;
 
-const FooterAddressContainer = styled.div`
+const MapAddressContainer = styled.div`
   padding-bottom: 1rem;
 `;
 
@@ -27,20 +27,20 @@ const NameLine = styled.p`
   padding-bottom: 1rem;
 `;
 
-class FooterAddressBox extends Component {
+class MapAddressBox extends Component {
 
   render() {
     return (
-      <FooterAddressBoxContainer mapHasCursor={ this.props.mapHasCursor }>
+      <MapAddressBoxContainer mapHasCursor={ this.props.mapHasCursor }>
         <NameLine>A Dental Place, Ltd.</NameLine>
-        <FooterAddressContainer>
+        <MapAddressContainer>
           <Address />
-        </FooterAddressContainer>
+        </MapAddressContainer>
         <PhoneFax footer={ true }/>
-      </FooterAddressBoxContainer>
+      </MapAddressBoxContainer>
     );
   }
 
 }
 
-export default FooterAddressBox;
+export default MapAddressBox;
