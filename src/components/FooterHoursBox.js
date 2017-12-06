@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const FooterHoursBoxContainer = styled.div`
-  display: flex;
-  margin: 0 0 0 1rem;
-  justify-content: space-around;
+  margin: 0 0 0 0;
   background-color: #EBF4FF;
   flex: 1;
   padding: 2rem;
@@ -13,12 +11,30 @@ const FooterHoursBoxContainer = styled.div`
   bottom: 2rem;
   transition: transform 150ms ease-in-out;
   transform: ${props => props.mapHasCursor ? 'translate(0, 2rem)' : ''};
+  text-align: left;
+`;
+
+const FooterHoursTable = styled.div`
+  display: table;
+  table-layout: fixed;
+  margin: auto;
+`;
+
+const FooterHoursTableCell = styled.div`
+  display: table-cell;
+  padding: 0;
+  margin: 1rem;
+  float: ${props => props.left ? 'left' : 'right'};
+
 `;
 
 const StyledHoursUl = styled.ul`
-  padding: 0;
   list-style: none;
+  padding: 0;
   margin: 0;
+  text-align: ${props => props.left ? 'right' : 'left'};
+  float: ${props => props.left ? 'left' : 'right'};
+
 `;
 
 class FooterHoursBox extends Component {
@@ -26,19 +42,25 @@ class FooterHoursBox extends Component {
   render() {
     return (
       <FooterHoursBoxContainer mapHasCursor={ this.props.mapHasCursor }>
-        <span>Hours</span>
-        <StyledHoursUl>
-          <li>Tuesday</li>
-          <li>Wednesday</li>
-          <li>Thursday</li>
-          <li>Friday</li>
-        </StyledHoursUl>
-        <StyledHoursUl>
-          <li>7:00am - 3:00pm</li>
-          <li>10:00am - 7:00pm</li>
-          <li>10:00am - 7:00pm</li>
-          <li>7:00am - 3:00pm</li>
-        </StyledHoursUl>
+        <span>Hours:</span>
+        <FooterHoursTable>
+          <FooterHoursTableCell left>
+            <StyledHoursUl left>
+              <li>Tuesday</li>
+              <li>Wednesday</li>
+              <li>Thursday</li>
+              <li>Friday</li>
+            </StyledHoursUl>
+          </FooterHoursTableCell>
+          <FooterHoursTableCell>
+            <StyledHoursUl>
+              <li>7am - 3pm</li>
+              <li>10am - 7pm</li>
+              <li>10am - 7pm</li>
+              <li>7am - 3pm</li>
+            </StyledHoursUl>
+          </FooterHoursTableCell>
+        </FooterHoursTable>
       </FooterHoursBoxContainer>
     );
   }

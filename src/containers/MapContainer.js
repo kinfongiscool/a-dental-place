@@ -8,7 +8,7 @@ const Container = styled.div`
   margin: auto;
 `;
 
-class MapFooterContainer extends Component {
+class MapContainer extends Component {
 
   constructor(props) {
     super(props);
@@ -45,4 +45,4 @@ class MapFooterContainer extends Component {
 
 }
 
-export default MapFooterContainer;
+export default MapContainer;

@@ -5,7 +5,6 @@ import FooterHoursBox from '../components/FooterHoursBox.js';
 
 const FooterBoxContainer = styled.div`
   display: flex;
-  align-items: stretch;
   justify-content: center;
   background-color: #2A6BB4;
   padding: 0 2rem 0 2rem;
