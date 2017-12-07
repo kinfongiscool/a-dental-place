@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import PhoneFax from './PhoneFax.js';
 
 const MapHoursBoxContainer = styled.div`
-  margin: 0 0 0 0;
+  margin: auto auto auto 1rem;
   background-color: #EBF4FF;
   flex: 1;
   padding: 2rem;
@@ -11,30 +12,19 @@ const MapHoursBoxContainer = styled.div`
   bottom: 2rem;
   transition: transform 150ms ease-in-out;
   transform: ${props => props.mapHasCursor ? 'translate(0, 2rem)' : ''};
+`;
+
+const MapHoursContentContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
   text-align: left;
-`;
-
-const MapHoursTable = styled.div`
-  display: table;
-  table-layout: fixed;
-  margin: auto;
-`;
-
-const MapHoursTableCell = styled.div`
-  display: table-cell;
-  padding: 0;
-  margin: 1rem;
-  float: ${props => props.left ? 'left' : 'right'};
-
 `;
 
 const StyledHoursUl = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: ${props => props.left ? 'right' : 'left'};
-  float: ${props => props.left ? 'left' : 'right'};
-
+  text-align: left;
 `;
 
 class MapHoursBox extends Component {
@@ -42,25 +32,22 @@ class MapHoursBox extends Component {
   render() {
     return (
       <MapHoursBoxContainer mapHasCursor={ this.props.mapHasCursor }>
-        <span>Hours:</span>
-        <MapHoursTable>
-          <MapHoursTableCell left>
-            <StyledHoursUl left>
-              <li>Tuesday</li>
-              <li>Wednesday</li>
-              <li>Thursday</li>
-              <li>Friday</li>
-            </StyledHoursUl>
-          </MapHoursTableCell>
-          <MapHoursTableCell>
-            <StyledHoursUl>
-              <li>7am - 3pm</li>
-              <li>10am - 7pm</li>
-              <li>10am - 7pm</li>
-              <li>7am - 3pm</li>
-            </StyledHoursUl>
-          </MapHoursTableCell>
-        </MapHoursTable>
+        <PhoneFax bottomMargin={ true }/>
+        <MapHoursContentContainer>
+          <span>Hours:</span>
+          <StyledHoursUl>
+            <li>Tuesday</li>
+            <li>Wednesday</li>
+            <li>Thursday</li>
+            <li>Friday</li>
+          </StyledHoursUl>
+          <StyledHoursUl>
+            <li>7am - 3pm</li>
+            <li>10am - 7pm</li>
+            <li>10am - 7pm</li>
+            <li>7am - 3pm</li>
+          </StyledHoursUl>
+        </MapHoursContentContainer>
       </MapHoursBoxContainer>
     );
   }

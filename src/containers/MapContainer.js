@@ -13,7 +13,7 @@ const MapBoxContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: #2A6BB4;
-  padding: 0 2rem 0 2rem;
+  padding: 1rem 2rem 1rem 2rem;
 `;
 
 class MapContainer extends Component {
