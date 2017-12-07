@@ -9,9 +9,9 @@ const MapHoursBoxContainer = styled.div`
   padding: 2rem;
   z-index: 10;
   position: relative;
-  bottom: 2rem;
+  bottom: 3rem;
   transition: transform 150ms ease-in-out;
-  transform: ${props => props.mapHasCursor ? 'translate(0, 2rem)' : ''};
+  transform: ${props => props.mapHasCursor ? 'translate(0, 3rem)' : ''};
 `;
 
 const MapHoursContentContainer = styled.div`
