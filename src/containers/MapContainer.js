@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
-import FooterContainer from './FooterContainer.js';
 import GoogleMapContainer from '../containers/GoogleMapContainer.js'
+import MapAddressBox from '../components/MapAddressBox.js';
+import MapHoursBox from '../components/MapHoursBox.js';
 
 const Container = styled.div`
   max-width: 1024px;
   margin: auto;
+`;
+
+const MapBoxContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  background-color: #2A6BB4;
+  padding: 1rem 2rem 1rem 2rem;
 `;
 
 class MapContainer extends Component {
@@ -38,7 +46,10 @@ class MapContainer extends Component {
           onMouseLeave={ this.mouseLeave }>
           <GoogleMapContainer />
         </div>
-        <FooterContainer mapHasCursor={ this.state.mapHasCursor } />
+        <MapBoxContainer mapHasCursor={ this.state.mapHasCursor }>
+          <MapAddressBox mapHasCursor={ this.state.mapHasCursor }/>
+          <MapHoursBox mapHasCursor={ this.state.mapHasCursor }/>
+        </MapBoxContainer>
       </Container>
     );
   }

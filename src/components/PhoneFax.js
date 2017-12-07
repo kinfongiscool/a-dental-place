@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const StyledPhoneFax = styled.p`
+const StyledPhoneFaxContainer = styled.div`
   ${props => {
-    if (props.footer) {
+    if (props.bottomMargin) {
       return `
-        margin: 0 0 0 0;
+        margin: 0 0 1rem 0;
+      `;
+    }
+  }}
+`;
+
+const StyledPhoneFax = styled.p`
+  margin: 0 0 0 0;
+  text-align: left;
+  ${props => {
+    if (props.white) {
+      return `
         color: #FFF;
-        text-align: left;
       `;
     }
   }}
@@ -16,13 +26,14 @@ const StyledPhoneFax = styled.p`
 class PhoneFax extends Component {
 
   render() {
-    const footer = this.props.footer;
+    const white = this.props.white;
+    const bottomMargin = this.props.bottomMargin;
 
     return (
-      <div>
-        <StyledPhoneFax footer={ footer }>Phone: (630) 620-7300</StyledPhoneFax>
-        <StyledPhoneFax footer={ footer }>Fax: (630) 620-7352</StyledPhoneFax>
-      </div>
+      <StyledPhoneFaxContainer bottomMargin = { bottomMargin }>
+        <StyledPhoneFax white={ white }>Phone: (630) 620-7300</StyledPhoneFax>
+        <StyledPhoneFax white={ white }>Fax: (630) 620-7352</StyledPhoneFax>
+      </StyledPhoneFaxContainer>
     );
   }
 

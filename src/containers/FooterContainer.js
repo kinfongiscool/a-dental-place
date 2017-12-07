@@ -1,24 +1,30 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import FooterAddressBox from '../components/FooterAddressBox.js';
-import FooterHoursBox from '../components/FooterHoursBox.js';
+import FooterContactInfo from '../components/FooterContactInfo.js';
+import FooterSiteMap from '../components/FooterSiteMap.js';
+import Copyright from '../components/Copyright.js';
 
-const FooterBoxContainer = styled.div`
+const StyledFooterContainer = styled.div`
+  background: #092E58;
+  padding: 4rem 2rem 1rem 2rem;
+`;
+
+const FooterContentContainer = styled.div`
   display: flex;
-  justify-content: center;
-  background-color: #2A6BB4;
-  padding: 0 2rem 0 2rem;
+  margin: auto;
 `;
 
 class FooterContainer extends Component {
 
   render() {
-
     return (
-      <FooterBoxContainer mapHasCursor={ this.props.mapHasCursor }>
-        <FooterAddressBox mapHasCursor={ this.props.mapHasCursor }/>
-        <FooterHoursBox mapHasCursor={ this.props.mapHasCursor }/>
-      </FooterBoxContainer>
+      <StyledFooterContainer>
+        <FooterContentContainer>
+          <FooterContactInfo />
+          <FooterSiteMap />
+        </FooterContentContainer>
+        <Copyright right/>
+      </StyledFooterContainer>
     );
   }
 
