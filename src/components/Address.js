@@ -9,7 +9,7 @@ const AddressLine = styled.p`
   padding: 0;
 
   ${props => props.isHeader && css`
-    color: #4A4A4A;
+    color: #000;
     text-align: right;
   `}
 `;

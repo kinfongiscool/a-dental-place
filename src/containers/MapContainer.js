@@ -4,15 +4,22 @@ import GoogleMapContainer from '../containers/GoogleMapContainer.js'
 import MapAddressBox from '../components/MapAddressBox.js';
 import MapHoursBox from '../components/MapHoursBox.js';
 
-const Container = styled.div`
+const MainContainer = styled.div`
   max-width: 1024px;
   margin: auto;
 `;
 
+const StyledMapContainer = styled.div`
+  background-color: #fff;
+`;
+
 const MapBoxContainer = styled.div`
+  background-color: #2A6BB4;
+`;
+
+const MapBoxFlexContainer = styled.div`
   display: flex;
   justify-content: center;
-  background-color: #2A6BB4;
   padding: 1rem 2rem 1rem 2rem;
 `;
 
@@ -40,17 +47,21 @@ class MapContainer extends Component {
   render() {
 
     return (
-      <Container>
-        <div
+      <StyledMapContainer>
+        <MainContainer
           onMouseEnter={ this.mouseEnter }
           onMouseLeave={ this.mouseLeave }>
           <GoogleMapContainer />
-        </div>
+        </MainContainer>
         <MapBoxContainer mapHasCursor={ this.state.mapHasCursor }>
-          <MapAddressBox mapHasCursor={ this.state.mapHasCursor }/>
-          <MapHoursBox mapHasCursor={ this.state.mapHasCursor }/>
+          <MainContainer>
+            <MapBoxFlexContainer>
+              <MapAddressBox mapHasCursor={ this.state.mapHasCursor }/>
+              <MapHoursBox mapHasCursor={ this.state.mapHasCursor }/>
+            </MapBoxFlexContainer>
+          </MainContainer>
         </MapBoxContainer>
-      </Container>
+      </StyledMapContainer>
     );
   }
 

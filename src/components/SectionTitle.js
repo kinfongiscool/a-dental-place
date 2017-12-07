@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 
 const SectionTitleText = styled.h1`
-  color: ${props => props.colored ? '#58A6FF' : '#4A4A4A'};
+  color: ${props => props.colored ? '#58A6FF' : '#000'};
 `;
 
 class SectionTitle extends Component {
