@@ -4,7 +4,8 @@ import Address from './Address.js';
 import logo from '../images/logo.svg';
 
 const AdpHeader = styled.div`
-  width: 100%;
+  max-width: 1024px;
+  margin: auto;
   display: flex;
   align-items: center;
 

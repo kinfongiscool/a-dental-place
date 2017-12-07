@@ -4,9 +4,14 @@ import FooterContactInfo from '../components/FooterContactInfo.js';
 import FooterSiteMap from '../components/FooterSiteMap.js';
 import Copyright from '../components/Copyright.js';
 
-const StyledFooterContainer = styled.div`
+const MainContainer = styled.div`
   background: #092E58;
-  padding: 4rem 2rem 1rem 2rem;
+`;
+
+const StyledFooterContainer = styled.div`
+  max-width: 1024px;
+  margin: auto;
+  padding: 4rem 4rem 1rem 4rem;
 `;
 
 const FooterContentContainer = styled.div`
@@ -18,13 +23,15 @@ class FooterContainer extends Component {
 
   render() {
     return (
-      <StyledFooterContainer>
-        <FooterContentContainer>
-          <FooterContactInfo />
-          <FooterSiteMap />
-        </FooterContentContainer>
-        <Copyright right/>
-      </StyledFooterContainer>
+      <MainContainer>
+        <StyledFooterContainer>
+          <FooterContentContainer>
+            <FooterContactInfo />
+            <FooterSiteMap />
+          </FooterContentContainer>
+          <Copyright right/>
+        </StyledFooterContainer>
+      </MainContainer>
     );
   }
 

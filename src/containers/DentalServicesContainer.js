@@ -9,7 +9,6 @@ import cosmeticTreatments from '../images/cosmetic-treatments.svg'
 const Container = styled.div`
   background-color: #EBF4FF;
   padding: 1px 0 1rem 0;
-
 `;
 
 const DentalServicesFlexContainer = styled.div`
