@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
+import { media } from '../media.js';
 import SectionTitle from '../components/SectionTitle.js'
 import DentalService from '../components/DentalService.js'
 import restorativeDentistry from '../images/restorative-dentistry.svg'
@@ -16,6 +17,11 @@ const DentalServicesFlexContainer = styled.div`
   justify-content: space-around;
   max-width: 1024px;
   margin: auto auto 2rem auto;
+
+  ${media.tablet`
+    display: inline-block;
+    margin: auto;
+  `}
 `;
 
 class DentalServicesContainer extends Component {
