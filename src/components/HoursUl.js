@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { media } from '../media.js';
 
 const StyledHoursUlContainer = styled.div`
 width: 100%;
@@ -15,6 +16,10 @@ const StyledHoursUl = styled.ul`
   margin: auto;
   text-align: left;
   color: white;
+
+  ${media.tablet`
+    flex: 1;
+  `}
 `;
 
 class HoursUl extends Component {
