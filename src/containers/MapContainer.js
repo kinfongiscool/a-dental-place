@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
+import { media } from '../media.js';
 import GoogleMapContainer from '../containers/GoogleMapContainer.js'
 import MapAddressBox from '../components/MapAddressBox.js';
 import MapHoursBox from '../components/MapHoursBox.js';
@@ -21,6 +22,11 @@ const MapBoxFlexContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 1rem 2rem 1rem 2rem;
+
+  ${media.phone`
+    display: inline;
+    padding: 2rem 2rem 2rem 2rem;
+  `}
 `;
 
 class MapContainer extends Component {
