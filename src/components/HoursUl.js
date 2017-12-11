@@ -15,7 +15,7 @@ const StyledHoursUl = styled.ul`
   padding: 0;
   margin: auto;
   text-align: left;
-  color: white;
+  color: #FDFEFF;
 
   ${media.tablet`
     flex: 1;

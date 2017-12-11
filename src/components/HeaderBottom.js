@@ -19,14 +19,14 @@ const HeaderBottomNavList = styled.ul`
 `;
 
 const HeaderBottomNavItem = styled.li`
-  color: white;
+  color: #FDFEFF;
   margin: .2rem 0 .2rem 0;
   padding: .8rem 1.25rem .8rem 1.25rem;
   border-radius: 2px;
 
   &:hover {
     color: #58A6FF;
-    background: white;
+    background: #FDFEFF;
   }
 `;
 

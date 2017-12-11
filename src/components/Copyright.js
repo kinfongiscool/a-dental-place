@@ -4,7 +4,7 @@ import { media } from '../media.js';
 
 const StyledCopyrightP = styled.p`
   text-align: ${props => props.right ? 'right' : 'left'};
-  color: #fff;
+  color: #FDFEFF;
 
   ${media.phone`
     padding: 2rem 0 0 0;
