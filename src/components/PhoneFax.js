@@ -17,7 +17,7 @@ const StyledPhoneFax = styled.p`
   ${props => {
     if (props.white) {
       return `
-        color: #FFF;
+        color: #FDFEFF;
       `;
     }
   }}

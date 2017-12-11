@@ -17,7 +17,7 @@ const StyledAddressContainer = styled.div`
 `;
 
 const StyledHoursP = styled.p`
-  color: white;
+  color: #FDFEFF;
 `;
 
 const HoursUlContainer = styled.div`

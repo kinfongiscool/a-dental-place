@@ -17,7 +17,7 @@ const StyledFooterLi = styled.li`
 `;
 
 const StyledFooterA = styled.a`
-  color: #fff;
+  color: #FDFEFF;
   text-decoration: none;
 `;
 

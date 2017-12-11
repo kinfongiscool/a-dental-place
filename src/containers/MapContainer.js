@@ -11,7 +11,6 @@ const MainContainer = styled.div`
 `;
 
 const StyledMapContainer = styled.div`
-  background-color: #fff;
 `;
 
 const MapBoxContainer = styled.div`
