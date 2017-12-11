@@ -21,7 +21,7 @@ const StyledFooterContainer = styled.div`
 
 const FooterContentContainer = styled.div`
   display: flex;
-  margin: auto;
+  margin: auto 4rem auto 4rem;
 
   ${media.phone`
     display: block;
