@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { media } from '../media.js';
 
 const StyledCopyrightP = styled.p`
   text-align: ${props => props.right ? 'right' : 'left'};
   color: #fff;
+
+  ${media.phone`
+    padding: 2rem 0 0 0;
+    text-align: center;
+  `}
 `;
 
 class Copyright extends Component {

@@ -11,11 +11,11 @@ const AdpHeader = styled.div`
 
   img {
     flex-grow: 0;
-    margin: 1rem 0 1rem 1.5rem;
+    margin: 1rem 0 1rem 2rem;
   }
   .header-contact-info {
     flex-grow: 1;
-    margin: 2rem 1.5rem 1rem 0;
+    margin: 2rem 2rem 1rem 0;
   }
 `;
 

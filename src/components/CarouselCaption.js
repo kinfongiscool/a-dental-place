@@ -17,19 +17,19 @@ const CarouselCaptionContainer = styled.div`
 `;
 
 const CarouselCaptionTitle = styled.h1`
-  padding: 1.5rem 1.5rem 0 1.5rem;
+  padding: 2rem 2rem 0 2rem;
   margin: 0;
   text-align: left;
 `;
 
 const CarouselCaptionSubTitle = styled.h3`
-  padding: 0rem 1.5rem 0 1.5rem;
+  padding: 0rem 2rem 0 2rem;
   margin: 0;
   text-align: left;
 `;
 
 const CarouselCaptionText = styled.p`
-  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  padding: 1rem 2rem 2rem 2rem;
   margin: 0;
   text-align: left;
   text-justifyl: left;
