@@ -19,6 +19,10 @@ const StyledFooterLi = styled.li`
 const StyledFooterA = styled.a`
   color: #FDFEFF;
   text-decoration: none;
+
+  &:hover {
+  color: #58A6FF;
+}
 `;
 
 class FooterSiteMap extends Component {
