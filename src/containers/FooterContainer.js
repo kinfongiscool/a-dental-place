@@ -21,7 +21,6 @@ const StyledFooterContainer = styled.div`
 
 const FooterContentContainer = styled.div`
   display: flex;
-  margin: auto 4rem auto 4rem;
 
   ${media.phone`
     display: block;
@@ -35,10 +34,10 @@ class FooterContainer extends Component {
       <MainContainer>
         <StyledFooterContainer>
           <FooterContentContainer>
-            <FooterContactInfo />
             <FooterSiteMap />
+            <FooterContactInfo />
           </FooterContentContainer>
-          <Copyright right/>
+          <Copyright/>
         </StyledFooterContainer>
       </MainContainer>
     );
