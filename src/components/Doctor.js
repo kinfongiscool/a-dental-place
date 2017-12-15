@@ -36,6 +36,10 @@ const DoctorTextContainer = styled.div`
   padding: ${props => props.imageLeft ? '1rem 2rem 1rem 5rem' : '1rem 5rem 1rem 2rem'};
   margin: ${props => props.imageLeft ? '0 -2rem 2rem 0' : '1rem 0 0 -2rem'};
 
+  ${DoctorContainer}:hover & {
+      background: #ACD3FF;
+  }
+
   ${media.phone`
     top: 0;
     right: 0;
