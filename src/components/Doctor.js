@@ -56,11 +56,22 @@ const DoctorName = styled.h3`
 
 const DoctorDescription = styled.p`
   text-align: left;
+  line-height: 160%;
 
   ${media.phone`
     margin: 0;
   `}
 `;
+
+function Descriptions(props) {
+  const descriptions = props.description;
+  const descriptionsItems = descriptions.map((descriptionItem) =>
+    <DoctorDescription>{ descriptionItem }</DoctorDescription>
+  );
+  return (
+    <div>{ descriptionsItems }</div>
+  );
+}
 
 class Doctor extends Component {
 
@@ -70,7 +81,7 @@ class Doctor extends Component {
         <DoctorImage imageLeft={ this.props.imageLeft } src={ this.props.image } alt={ this.props.name } />
         <DoctorTextContainer imageLeft={ this.props.imageLeft }>
           <DoctorName>{ this.props.name }</DoctorName>
-          <DoctorDescription>{ this.props.description }</DoctorDescription>
+          <Descriptions description={ this.props.description }/>
         </DoctorTextContainer>
       </DoctorContainer>
     );
