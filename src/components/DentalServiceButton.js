@@ -5,8 +5,8 @@ const Button = styled.div`
   background: ${props => props.hasCursor ? '#ACD3FF;' : 'white'};
 	margin: 1em;
 	padding: .5rem 2rem;
-	border-radius: 3px;
   font-weight: bold;
+  transition: all 150ms ease;
 `;
 
 class DentalServiceButton extends Component {

@@ -9,10 +9,10 @@ const StyledDentalService = styled.div`
   `}
 `;
 
-const StyledDentalServiceButton = styled(DentalServiceButton)`
-${StyledDentalService}:hover & {
-    background: #ACD3FF;
-}
+const StyledDentalServiceButton = styled(DentalServiceButton)`  
+  ${StyledDentalService}:hover & {
+      background: #ACD3FF;
+  }
 `;
 
 class DentalService extends Component {

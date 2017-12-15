@@ -20,10 +20,9 @@ const HeaderBottomNavList = styled.ul`
 
 const HeaderBottomNavItem = styled.li`
   color: #FDFEFF;
-  margin: .2rem 0 .2rem 0;
-  padding: .8rem 1.25rem .8rem 1.25rem;
-  border-radius: 2px;
-
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  transition: all 150ms ease;
+  
   &:hover {
     color: #58A6FF;
     background: #FDFEFF;

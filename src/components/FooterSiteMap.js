@@ -19,6 +19,7 @@ const StyledFooterLi = styled.li`
 const StyledFooterA = styled.a`
   color: #FDFEFF;
   text-decoration: none;
+  transition: all 150ms ease;
 
   &:hover {
   color: #58A6FF;
