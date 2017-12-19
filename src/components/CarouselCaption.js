@@ -33,6 +33,7 @@ const CarouselCaptionText = styled.p`
   margin: 0;
   text-align: left;
   text-justifyl: left;
+  line-height: 160%;
 `;
 
 class CarouselCaption extends Component {
@@ -43,7 +44,7 @@ class CarouselCaption extends Component {
         <CarouselCaptionContainer>
           <CarouselCaptionTitle>Welcome to our practice!</CarouselCaptionTitle>
           <CarouselCaptionSubTitle>A Dental Place, ltd. Located in Lombard, IL.</CarouselCaptionSubTitle>
-          <CarouselCaptionText>Established in 1988, A Dental Place specializes in beautifying smiles, maintaining your dental health, and helping you improve your appearance. Our experienced and friendly staff takes great pride in keeping your smile beautiful. Our promise to you is that the veneers, fillings, crowns, and bridges we create will look as good as or better than the teeth nature gave you. And to make sure we keep that promise, the products we recommend and use are the highest quality and incredibly durable.</CarouselCaptionText>
+          <CarouselCaptionText>A Dental Place is here to beautify your smile and to maintain your dental health. Established in 1988, our mission has always been to provide the highest quality care in a gentle, comfortable environment. We strive to build genuine relationships with our patients and take pride when those relationship span multiple generations. Our practice is more than a dental office, it’s a family, and we can’t wait for you to be a part of it.</CarouselCaptionText>
         </CarouselCaptionContainer>
       </CarouselCaptionContainerContainer>
     );

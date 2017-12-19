@@ -35,6 +35,11 @@ const DoctorTextContainer = styled.div`
   align-items: left;
   padding: ${props => props.imageLeft ? '1rem 2rem 1rem 5rem' : '1rem 5rem 1rem 2rem'};
   margin: ${props => props.imageLeft ? '0 -2rem 2rem 0' : '1rem 0 0 -2rem'};
+  transition: all 150ms ease;
+
+  ${DoctorContainer}:hover & {
+      background: #ACD3FF;
+  }
 
   ${media.phone`
     top: 0;
@@ -56,11 +61,22 @@ const DoctorName = styled.h3`
 
 const DoctorDescription = styled.p`
   text-align: left;
+  line-height: 160%;
 
   ${media.phone`
     margin: 0;
   `}
 `;
+
+function Descriptions(props) {
+  const descriptions = props.description;
+  const descriptionsItems = descriptions.map((descriptionItem) =>
+    <DoctorDescription>{ descriptionItem }</DoctorDescription>
+  );
+  return (
+    <div>{ descriptionsItems }</div>
+  );
+}
 
 class Doctor extends Component {
 
@@ -70,7 +86,7 @@ class Doctor extends Component {
         <DoctorImage imageLeft={ this.props.imageLeft } src={ this.props.image } alt={ this.props.name } />
         <DoctorTextContainer imageLeft={ this.props.imageLeft }>
           <DoctorName>{ this.props.name }</DoctorName>
-          <DoctorDescription>{ this.props.description }</DoctorDescription>
+          <Descriptions description={ this.props.description }/>
         </DoctorTextContainer>
       </DoctorContainer>
     );

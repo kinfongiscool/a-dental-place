@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 
 const Button = styled.div`
-  background: white;
+  background: ${props => props.hasCursor ? '#ACD3FF;' : 'white'};
 	margin: 1em;
 	padding: .5rem 2rem;
-	border-radius: 3px;
-  &:hover {
-    background: #ACD3FF;
-  }
   font-weight: bold;
+  transition: all 150ms ease;
 `;
 
 class DentalServiceButton extends Component {
 
   render() {
+
+    var hasCursor = this.props.hasCursor;
+
     return (
-      <Button>{ this.props.text }</Button>
+      <Button hasCursor={ hasCursor }>{ this.props.text }</Button>
     );
   }
 
