@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { media } from '../media.js';
 import DentalServiceButton from './DentalServiceButton.js'
+import { Link } from 'react-router-dom'
+
+const ServicesLink = styled(Link)`
+  text-decoration: none;
+  color: #333;
+`;
 
 const StyledDentalService = styled.div`
   ${media.tablet`
@@ -9,7 +15,7 @@ const StyledDentalService = styled.div`
   `}
 `;
 
-const StyledDentalServiceButton = styled(DentalServiceButton)`  
+const StyledDentalServiceButton = styled(DentalServiceButton)`
   ${StyledDentalService}:hover & {
       background: #ACD3FF;
   }
@@ -38,12 +44,14 @@ class DentalService extends Component {
 
   render() {
     return (
-      <StyledDentalService
-        onMouseEnter={ this.mouseEnter }
-        onMouseLeave={ this.mouseLeave } >
-        <img src={ this.props.image } alt={ this.props.name } />
-        <StyledDentalServiceButton hasCursor={ this.state.hasCursor } url={ this.props.url } text={ this.props.name } />
-      </StyledDentalService>
+      <ServicesLink to="/services">
+        <StyledDentalService
+          onMouseEnter={ this.mouseEnter }
+          onMouseLeave={ this.mouseLeave } >
+          <img src={ this.props.image } alt={ this.props.name } />
+          <StyledDentalServiceButton hasCursor={ this.state.hasCursor } url={ this.props.url } text={ this.props.name } />
+        </StyledDentalService>
+      </ServicesLink>
     );
   }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
 const StyledFooterSiteMap = styled.div`
   flex: 1;
@@ -16,14 +17,14 @@ const StyledFooterLi = styled.li`
   margin: 0 0 1rem 0;
 `;
 
-const StyledFooterA = styled.a`
+const StyledFooterLink = styled(Link)`
+  text-decoration: none;
   color: #FDFEFF;
   text-decoration: none;
   transition: all 150ms ease;
 
   &:hover {
   color: #58A6FF;
-}
 `;
 
 class FooterSiteMap extends Component {
@@ -33,22 +34,22 @@ class FooterSiteMap extends Component {
       <StyledFooterSiteMap>
         <StyledFooterUL>
           <StyledFooterLi>
-            <StyledFooterA href="">Home</StyledFooterA>
+            <StyledFooterLink to="/">Home</StyledFooterLink>
           </StyledFooterLi>
           <StyledFooterLi>
-            <StyledFooterA href="">Meet the Team</StyledFooterA>
+            <StyledFooterLink to="/meet-the-team">Meet the Team</StyledFooterLink>
           </StyledFooterLi>
           <StyledFooterLi>
-            <StyledFooterA href="">Services</StyledFooterA>
+            <StyledFooterLink to="/services">Services</StyledFooterLink>
           </StyledFooterLi>
           <StyledFooterLi>
-            <StyledFooterA href="">New Patients</StyledFooterA>
+            <StyledFooterLink to="/new-patients">New Patients</StyledFooterLink>
           </StyledFooterLi>
           <StyledFooterLi>
-            <StyledFooterA href="">Contact</StyledFooterA>
+            <StyledFooterLink to="/contact">Contact</StyledFooterLink>
           </StyledFooterLi>
           <StyledFooterLi>
-            <StyledFooterA href="">Testimonials</StyledFooterA>
+            <StyledFooterLink to="/testimonials">Testimonials</StyledFooterLink>
           </StyledFooterLi>
         </StyledFooterUL>
       </StyledFooterSiteMap>

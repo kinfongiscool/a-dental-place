@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import { media } from '../media.js';
 import Address from './Address.js';
 import logo from '../images/logo.svg';
+import { Link } from 'react-router-dom'
 
 const AdpHeader = styled.div`
   max-width: 1024px;
@@ -50,7 +51,9 @@ class HeaderTop extends Component {
   render() {
     return (
       <AdpHeader>
+      <Link to="/">
         <StyledHeaderImg src={logo} className="logo" alt="logo" />
+        </Link>
         <StyledHeaderContactInfo className="header-contact-info">
           <PhoneNumber>Call: (630) 620-7300</PhoneNumber>
           <Address isHeader/>
