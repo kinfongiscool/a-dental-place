@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { media } from '../media.js';
+import { Link } from 'react-router-dom';
+
+const DoctorLink = styled(Link)`
+  text-decoration: none;
+  color: #333;
+`;
 
 const DoctorContainer = styled.div`
   display: flex;
@@ -82,13 +88,15 @@ class Doctor extends Component {
 
   render() {
     return (
-      <DoctorContainer imageLeft={ this.props.imageLeft } key={ this.props.key } >
-        <DoctorImage imageLeft={ this.props.imageLeft } src={ this.props.image } alt={ this.props.name } />
-        <DoctorTextContainer imageLeft={ this.props.imageLeft }>
-          <DoctorName>{ this.props.name }</DoctorName>
-          <Descriptions description={ this.props.description }/>
-        </DoctorTextContainer>
-      </DoctorContainer>
+      <DoctorLink to="/meet-the-team">
+        <DoctorContainer imageLeft={ this.props.imageLeft } key={ this.props.key } >
+            <DoctorImage imageLeft={ this.props.imageLeft } src={ this.props.image } alt={ this.props.name } />
+            <DoctorTextContainer imageLeft={ this.props.imageLeft }>
+              <DoctorName>{ this.props.name }</DoctorName>
+              <Descriptions description={ this.props.description }/>
+            </DoctorTextContainer>
+        </DoctorContainer>
+      </DoctorLink>
     );
   }
 

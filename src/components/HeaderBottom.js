@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { media } from '../media.js';
+import { Link } from 'react-router-dom'
 
 const HeaderBottomContainer = styled.div`
   background: #58A6FF;
@@ -18,11 +19,16 @@ const HeaderBottomNavList = styled.ul`
   `}
 `;
 
+const HeaderBottomLink = styled(Link)`
+  text-decoration: none;
+`;
+
 const HeaderBottomNavItem = styled.li`
   color: #FDFEFF;
   padding: 1rem 1.5rem 1rem 1.5rem;
   transition: all 150ms ease;
-  
+  text-decoration: none;
+
   &:hover {
     color: #58A6FF;
     background: #FDFEFF;
@@ -35,12 +41,41 @@ class HeaderBottom extends Component {
     return (
       <HeaderBottomContainer>
         <HeaderBottomNavList>
-          <HeaderBottomNavItem><a src="#meet-the-team">Meet the Team</a></HeaderBottomNavItem>
-          <HeaderBottomNavItem><a src="#services">Services</a></HeaderBottomNavItem>
-          <HeaderBottomNavItem><a src="#new-patients">New Patients</a></HeaderBottomNavItem>
-          <HeaderBottomNavItem><a src="#faqs">FAQs</a></HeaderBottomNavItem>
-          <HeaderBottomNavItem><a src="#Contact">Contact</a></HeaderBottomNavItem>
-          <HeaderBottomNavItem><a src="#Testimonials">Testimonials</a></HeaderBottomNavItem>
+          <HeaderBottomLink to="/">
+            <HeaderBottomNavItem>
+              <span>Home</span>
+            </HeaderBottomNavItem>
+          </HeaderBottomLink>
+          <HeaderBottomLink to="/meet-the-team">
+            <HeaderBottomNavItem>
+              <span>Meet the Team</span>
+            </HeaderBottomNavItem>
+          </HeaderBottomLink>
+          <HeaderBottomLink to="/services">
+            <HeaderBottomNavItem>
+              <span>Services</span>
+            </HeaderBottomNavItem>
+          </HeaderBottomLink>
+          <HeaderBottomLink to="/new-patients">
+            <HeaderBottomNavItem>
+              <span>New Patients</span>
+            </HeaderBottomNavItem>
+          </HeaderBottomLink>
+          <HeaderBottomLink to="/faqs">
+            <HeaderBottomNavItem>
+              <span>FAQs</span>
+            </HeaderBottomNavItem>
+          </HeaderBottomLink>
+          <HeaderBottomLink to="/contact">
+            <HeaderBottomNavItem>
+              <span>Contact</span>
+            </HeaderBottomNavItem>
+          </HeaderBottomLink>
+          <HeaderBottomLink to="/Testimonials">
+            <HeaderBottomNavItem>
+              <span>Testimonials</span>
+            </HeaderBottomNavItem>
+          </HeaderBottomLink>
         </HeaderBottomNavList>
       </HeaderBottomContainer>
     );
