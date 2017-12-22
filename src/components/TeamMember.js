@@ -3,12 +3,12 @@ import styled, { css } from 'styled-components';
 import { media } from '../media.js';
 import { Link } from 'react-router-dom';
 
-const DoctorLink = styled(Link)`
+const TeamMemberLink = styled(Link)`
   text-decoration: none;
   color: #333;
 `;
 
-const DoctorContainer = styled.div`
+const TeamMemberContainer = styled.div`
   display: flex;
   flex-direction: ${props => props.imageLeft ? 'row' : 'row-reverse'};
   margin: ${props => props.imageLeft ? '0 0 2rem 0' : '2rem 0 0 0'};
@@ -19,7 +19,7 @@ const DoctorContainer = styled.div`
   `}
 `;
 
-const DoctorImage = styled.img`
+const TeamMemberImage = styled.img`
   padding: 1rem;
   z-index: 10;
   align-self: ${props => props.imageLeft ? 'flex-start' : 'flex-end'};
@@ -30,7 +30,7 @@ const DoctorImage = styled.img`
   `}
 `;
 
-const DoctorTextContainer = styled.div`
+const TeamMemberTextContainer = styled.div`
   height: 100%;
   position: relative;
   top: ${props => props.imageLeft ? '2rem' : ''};
@@ -43,8 +43,8 @@ const DoctorTextContainer = styled.div`
   margin: ${props => props.imageLeft ? '0 -2rem 2rem 0' : '1rem 0 0 -2rem'};
   transition: all 150ms ease;
 
-  ${DoctorContainer}:hover & {
-      background: #ACD3FF;
+  ${TeamMemberContainer}:hover & {
+      background: ${props => props.clickable ? '#ACD3FF' : ''};
   }
 
   ${media.phone`
@@ -57,7 +57,7 @@ const DoctorTextContainer = styled.div`
   `}
 `;
 
-const DoctorName = styled.h3`
+const TeamMemberName = styled.h3`
   text-align: left;
 
   ${media.phone`
@@ -65,7 +65,7 @@ const DoctorName = styled.h3`
   `}
 `;
 
-const DoctorDescription = styled.p`
+const TeamMemberDescription = styled.p`
   text-align: left;
   line-height: 160%;
 
@@ -77,29 +77,29 @@ const DoctorDescription = styled.p`
 function Descriptions(props) {
   const descriptions = props.description;
   const descriptionsItems = descriptions.map((descriptionItem) =>
-    <DoctorDescription>{ descriptionItem }</DoctorDescription>
+    <TeamMemberDescription>{ descriptionItem }</TeamMemberDescription>
   );
   return (
     <div>{ descriptionsItems }</div>
   );
 }
 
-class Doctor extends Component {
+class TeamMember extends Component {
 
   render() {
     return (
-      <DoctorLink to="/meet-the-team">
-        <DoctorContainer imageLeft={ this.props.imageLeft } key={ this.props.key } >
-            <DoctorImage imageLeft={ this.props.imageLeft } src={ this.props.image } alt={ this.props.name } />
-            <DoctorTextContainer imageLeft={ this.props.imageLeft }>
-              <DoctorName>{ this.props.name }</DoctorName>
+      <TeamMemberLink to="/meet-the-team">
+        <TeamMemberContainer clickable={ this.props.clickable } imageLeft={ this.props.imageLeft } key={ this.props.key } >
+            <TeamMemberImage imageLeft={ this.props.imageLeft } src={ this.props.image } alt={ this.props.name } />
+            <TeamMemberTextContainer clickable={ this.props.clickable } imageLeft={ this.props.imageLeft }>
+              <TeamMemberName>{ this.props.name }</TeamMemberName>
               <Descriptions description={ this.props.description }/>
-            </DoctorTextContainer>
-        </DoctorContainer>
-      </DoctorLink>
+            </TeamMemberTextContainer>
+        </TeamMemberContainer>
+      </TeamMemberLink>
     );
   }
 
 }
 
-export default Doctor;
+export default TeamMember;
