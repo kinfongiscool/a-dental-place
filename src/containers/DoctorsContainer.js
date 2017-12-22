@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
-import Doctor from '../components/Doctor.js';
+import TeamMember from '../components/TeamMember.js';
 import SectionTitle from '../components/SectionTitle.js'
 import danFong from '../images/dan-fong.png';
 import robinCastro from '../images/robin-castro.png';
@@ -14,7 +14,7 @@ class MeetTheDoctorsContainer extends Component {
 
   render() {
     const doctors = [
-      <Doctor
+      <TeamMember
         key="Dr. Dan Fong"
         name="Dr. Dan Fong, DDS"
         description={
@@ -24,8 +24,9 @@ class MeetTheDoctorsContainer extends Component {
           ]
         }
         image={ danFong }
-        imageLeft={ true } />,
-      <Doctor
+        imageLeft={ true }
+        clickable={ true } />,
+      <TeamMember
         key="Dr. Robin Castro"
         name="Dr. Robin Castro, DMD"
         description={
@@ -36,7 +37,8 @@ class MeetTheDoctorsContainer extends Component {
           ]
         }
         image={ robinCastro }
-        imageLeft={ false } />
+        imageLeft={ false }
+        clickable={ true } />
     ]
 
     return (
