@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import NewPatients from '../components/NewPatients.js'
 import FooterContainer from './FooterContainer.js';
 
-class NewPatients extends Component {
+class NewPatientsContainer extends Component {
 
   render() {
     return (
       <div>
-        <p>New Patients</p>
+        <NewPatients />
         <FooterContainer />
       </div>
     );
@@ -14,4 +15,4 @@ class NewPatients extends Component {
 
 }
 
-export default NewPatients;
+export default NewPatientsContainer;
