@@ -4,6 +4,8 @@ import { media } from '../media.js';
 import ADentalPlaceName from './ADentalPlaceName.js';
 import Address from './Address.js';
 import PhoneFax from './PhoneFax.js';
+import EmergencyContact from './EmergencyContact.js';
+import EmailAddressContact from './EmailAddressContact.js';
 import HoursUl from './HoursUl.js';
 
 const StyledFooterContactInfoContainer = styled.div`
@@ -36,6 +38,8 @@ class FooterContactInfo extends Component {
           <Address />
         </StyledAddressContainer>
         <PhoneFax white={ true }/>
+        <EmergencyContact />
+        <EmailAddressContact />
         <StyledHoursP>Hours:</StyledHoursP>
         <HoursUlContainer>
           <HoursUl />
