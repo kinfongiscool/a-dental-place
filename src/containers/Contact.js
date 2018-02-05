@@ -119,7 +119,7 @@ class Contact extends Component {
         <Container>
           <FormContainer>
             <Styledp>Send us a message! Fill out the form below and we&#39;ll get back to you as soon as we can.</Styledp>
-            <StyledForm method="POST" action="http://formspree.io/bradley.kin.fong@gmail.com">
+            <StyledForm method="POST" action="http://formspree.io/adentalplace@gmail.com">
               <StyledInput type="text" name="name" placeholder="Your name*" onChange={this.handleNameChange}/>
               <StyledInput type="text" name="phone" placeholder="Your number*" onChange={this.handleNumberChange}/>
               <StyledInput type="email" name="email" placeholder="Your email*" onChange={this.handleEmailChange}/>
