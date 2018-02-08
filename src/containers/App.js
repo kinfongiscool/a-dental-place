@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import logo from '../images/logo.svg';
-import Header from '../components/Header.js'
-import './App.css';
+import HeaderContainer from './HeaderContainer.js';
+import Main from './Main.js';
+
+const AppContainer = styled.div`
+  text-align: center;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header className="Header" />
-      </div>
+      <AppContainer>
+        <HeaderContainer />
+        <Main />
+      </AppContainer>
     );
   }
 }

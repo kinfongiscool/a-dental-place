@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="193px" height="193px" viewBox="0 0 193 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 13</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-416.000000, -1658.000000)">
+            <g id="Group-4" transform="translate(0.000000, 1500.000000)">
+                <g id="General-Care" transform="translate(410.000000, 158.000000)">
+                    <g id="Group" transform="translate(6.000000, 0.000000)">
+                        <g id="Group-13">
+                            <g id="services-circle" fill="#ACD3FF">
+                                <circle id="Oval" cx="96.5" cy="96.5" r="96.5"></circle>
+                            </g>
+                            <g id="Asset-4" transform="translate(48.000000, 32.000000)" fill-rule="nonzero">
+                                <rect id="Rectangle-path" fill="#EFEFEF" x="73" y="0" width="25" height="32" rx="5"></rect>
+                                <g id="_Group_" transform="translate(87.000000, 0.000000)" fill="#58A6FF">
+                                    <path d="M11,4.26666667 L11,123.733333 C11.0000638,126.077308 9.17144958,127.98242 6.90465771,128 L4.09534229,128 C1.82855042,127.98242 -6.37562042e-05,126.077308 1.32699407e-13,123.733333 L1.32699407e-13,0 L6.90809628,0 C9.17354315,0.0195216584 11.0000787,1.92406749 11,4.26666667 L11,4.26666667 Z" id="Shape"></path>
+                                </g>
+                                <path d="M25.5017977,128.999966 L46.291452,128.999966 C47.6101665,129.003967 48.8697568,128.456327 49.7620867,127.491018 C50.6544166,126.525708 51.0971803,125.231765 50.9820638,123.925729 L41.1371705,14.1149547 C40.9394819,11.970911 39.0165107,10.5415485 36.8239642,10.5415485 L31.4324564,10.5415485 L30.5518434,2.88373885 C30.3673409,1.24488544 28.9756796,0.00429628862 27.3169387,0 L23.7226001,0 C22.0638592,0.00429628862 20.672198,1.24488544 20.4876954,2.88373885 L19.5711391,10.5415485 L14.1796312,10.5415485 C11.9870847,10.5415485 10.0641136,11.970911 9.86642497,14.1149547 L0.0179372972,123.925729 C-0.097237517,125.232387 0.346000359,126.526911 1.23912585,127.492341 C2.13225133,128.457772 3.39280439,129.004973 4.71214346,128.999966 L25.5017977,128.999966 Z" id="Shape" fill="#EFEFEF"></path>
+                                <polygon id="Shape" fill="#58A6FF" points="42.6 30 48 90 3 90 8.4 30"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
