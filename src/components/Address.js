@@ -11,11 +11,7 @@ const AddressLine = styled.p`
 
   ${props => props.isHeader && css`
     color: #333;
-    text-align: right;
-
-    ${media.phone`
-      text-align: center;
-    `}
+    text-align: center;
   `}
 `;
 
