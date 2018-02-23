@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import Carousel from 'nuka-carousel';
 
+import banner from '../images/banner v2.svg';
+
 const FirstSlide = styled.div`
-  background-color: palevioletred;
+  background: palevioletred;
   width: auto;
   height: 400px;
 `;
@@ -48,7 +50,11 @@ class AdpCarousel extends Component {
       <CarouselContainer>
         <Carousel autoplay={true} autoplayInterval={8000} speed={1000} wrapAround={true} decorators={Decorators}>
           <FirstSlide />
-          <SecondSlide />
+          <SecondSlide>
+            <div>
+              <img src={ banner } />
+            </div>
+          </SecondSlide>
           <ThirdSlide />
         </Carousel>
       </CarouselContainer>
