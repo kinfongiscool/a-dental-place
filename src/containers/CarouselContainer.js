@@ -8,7 +8,6 @@ class CarouselContainer extends Component {
     return (
       <div>
         <AdpCarousel />
-        <CarouselCaption />
       </div>
     );
   }
