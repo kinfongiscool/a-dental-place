@@ -2,22 +2,60 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import Carousel from 'nuka-carousel';
 
-const FirstSlide = styled.div`
-  background-color: palevioletred;
-  width: auto;
-  height: 400px;
+import banner from '../images/banner v2.svg';
+import fakeOffice from '../images/dentoffice.jpg';
+import fakeFamily from '../images/family-outdoor-happy-happiness-160994.jpeg';
+
+const StyledH1 = styled.h1`
+  font-size: 2.5em;
+  color: #FDFEFF;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
 `;
 
-const SecondSlide = styled.div`
-  background-color: wheat;
-  width: auto;
-  height: 400px;
+const StyledH2 = styled.h2`
+  font-size: 2.2em;
+  color: #FDFEFF;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
 `;
 
-const ThirdSlide = styled.div`
-  background-color: darkseagreen;
+const TextWrapper = styled.div`
+  padding: 0;
+  margin: auto;
+  height: 400px;
+  width: auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const SlideContentsContainer = styled.div`
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const SlideImg = styled.img`
+flex-shrink: 0;
+min-width: 100%;
+min-height: 100%
+
+  overflow: hidden;
+`;
+
+const Slide = styled.div`
   width: auto;
   height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const CarouselContainer = styled.div`
@@ -47,9 +85,33 @@ class AdpCarousel extends Component {
     return (
       <CarouselContainer>
         <Carousel autoplay={true} autoplayInterval={8000} speed={1000} wrapAround={true} decorators={Decorators}>
-          <FirstSlide />
-          <SecondSlide />
-          <ThirdSlide />
+          <Slide>
+            <SlideContentsContainer>
+              <SlideImg src={ banner } />
+            </SlideContentsContainer>
+            <TextWrapper>
+              <StyledH1>A Dental Place, ltd.</StyledH1>
+              <StyledH2>Give us your money</StyledH2>
+            </TextWrapper>
+          </Slide>
+          <Slide>
+            <SlideContentsContainer>
+              <SlideImg src={ fakeOffice } />
+            </SlideContentsContainer>
+            <TextWrapper>
+              <StyledH1>We&apos;re more than an office</StyledH1>
+              <StyledH2>Welcome to the <b>family</b></StyledH2>
+            </TextWrapper>
+          </Slide>
+          <Slide>
+            <SlideContentsContainer>
+              <SlideImg src={ fakeFamily } />
+            </SlideContentsContainer>
+            <TextWrapper>
+              <StyledH1>We will fix your smile</StyledH1>
+              <StyledH2>Because you paid us to fix your smile</StyledH2>
+            </TextWrapper>
+          </Slide>
         </Carousel>
       </CarouselContainer>
     );
